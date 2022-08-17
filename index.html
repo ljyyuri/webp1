@@ -4,161 +4,68 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>刘建宇</title>
-    <!--
-      1.先分析布局
-      2.从外向内写
-      3.不同标签的相同属性可以用class定义一个规则
-      4.最后优化细节及扩展性
-    -->
-    <style>
-      body {
-        margin: 0;
-        height: 100vh;
-        background-color: #eee;
-      }
-      /* * {
-        border: 1px solid black;
-      } */
-      .yinYing {
-        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
-          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
-      }
-      .flex {
-        display: flex;
-      }
-      .baiSe {
-        background-color: white;
-      }
-      .flex1 {
-        flex: 1;
-      }
-      .column {
-        flex-direction: column;
-      }
-      .mg8 {
-        margin: 8px;
-      }
-      .mgr8 {
-        margin-right: 8px;
-      }
-      .mgt8 {
-        margin-top: 8px;
-      }
-      .daoHang {
-        padding: 10px 20px;
-        border-bottom: 1px solid #999;
-        font-size: 14px;
-        color: #999;
-      }
-      .neiRong::-webkit-scrollbar {
-        display: none;
-      }
-      /* 当屏幕小于600px时要改变的CSS样式 */
-      @media (max-width: 600px) {
-        /* 小屏幕上取消侧边栏，后面学js时会教怎么弹出 */
-        .ceBian {
-          display: none;
-        }
-        /* 内容栏和数据栏flex方向改为竖向 */
-        .neiRong {
-          flex-direction: column;
-        }
-        .shuJuQu {
-          flex-direction: column;
-        }
-        /* 右区加左外边距 */
-        .youQu {
-          margin-left: 8px;
-        }
-        /* 数据块外边距，大小改为自动宽高 */
-        .shuJu {
-          margin: 0 0 8px;
-          flex: auto;
-        }
-      }
-    </style>
+    <title>机会</title>
+    <link rel="shortcut icon" href="icons/icon3232.jpg" />
   </head>
-  <body class="flex">
-    <!--侧边栏-->
-    <div style="width: 200px; z-index: 3" class="baiSe yinYing ceBian">
-      <!--头像栏-->
-      <div
-        style="
-          padding: 10px;
-          align-items: center;
-          justify-content: center;
-          border-bottom: 1px solid #999;
-        "
-        class="flex"
-      >
-        <img
-          src="./pictures/IMG_2700.JPG"
-          alt="刘建宇"
-          width="40px"
-          height="40px"
-        />
-        <div style="margin-left: 10px">刘建宇</div>
-        <!-- <p style="margin-left: 10px">刘建宇</p> -->
-      </div>
-      <!--导航栏-->
-      <div class="flex1">
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-        <div class="daoHang">导航</div>
-      </div>
+  <body>
+    <div style="background-color: #f1f1f1; text-align: center; padding: 40px">
+      <!--标题栏 color: rgb(52, 93, 136);-->
+      <img src="./pictures/jihui.jpg" alt="机会" width="80px" height="80px" />
     </div>
-    <!--主区域-->
-    <div class="flex1 flex column">
-      <!--头部栏-->
-      <div style="height: 60px; z-index: 2" class="baiSe yinYing yinYing"></div>
-      <!--内容区-->
-      <div style="overflow: auto" class="neiRong flex1 flex">
-        <!--左区-->
-        <div style="flex: 3" class="flex column mg8">
-          <!--数据区-->
-          <div class="flex shuJuQu">
-            <!--数据块-->
-            <div
-              style="height: 100px"
-              class="shuju flex1 baiSe mgr8 yinYing"
-            ></div>
-            <div
-              style="height: 100px"
-              class="shuju flex1 baiSe mgr8 yinYing"
-            ></div>
-            <div
-              style="height: 100px"
-              class="shuju flex1 baiSe mgr8 yinYing"
-            ></div>
-            <div style="height: 100px" class="shuju flex1 baiSe yinYing"></div>
-          </div>
-          <!--列表区-->
-          <div class="flex column">
-            <!--列表项-->
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-            <div style="height: 160px" class="baiSe mgt8 yinYing"></div>
-          </div>
-        </div>
-        <!--右区-->
-        <div style="flex: 1" class="youQu flex column mgr8 mgt8">
-          <!--提示区-->
-          <div style="height: 150px" class="baiSe yinYing"></div>
-          <!--消息区-->
-          <div style="height: 300px" class="baiSe mgt8 yinYing"></div>
-        </div>
-      </div>
+    <div
+      style="
+        max-width: 760px;
+        margin: 30px auto;
+        padding: 15px;
+        color: rgb(52, 93, 136);
+        line-height: 1.7;
+        text-size-adjust: 100%;
+      "
+    >
+      <p>Hello buddy：</p>
+      <p>
+        你现在看到的是未来世界首富的个人主页，也许你觉得我疯了，但是“燕雀安知鸿鹄之志哉”，你信与不信都没关系，因为一切伟大都是不可思议的存在。
+      </p>
+      <p>
+        正所谓：文章盖世，孔子尚困于陈邦。武略超群，太公垂钓与渭水。张良原是布衣，萧何称谓县吏。晏子身
+      </p>
+      <p>
+        无五尺，封为齐国首相。孔明卧居草庐，能作蜀汉军师，韩信无缚鸡之力，封为汉朝大将。
+      </p>
+      <p>
+        蛟龙未遇，潜身于鱼虾之间。君子失时，拱手于小人之下。余曰：非吾贱也，非吾贵也，乃时也，运也，命也！
+      </p>
+      <p>
+        盖，人生在世，富贵不能移，贫贱不可欺；此乃天地循环，终而复始者也。只等一个机会，这个既属于我也属于你的机会。
+      </p>
+      <p>
+        此时机会就在眼前，我有一个十分有潜力的项目，急需一笔启动资金，加入我，支持我，做首富背后的人。
+      </p>
+      <p>他日若遂凌云志必定还你一个飞黄腾达、荣华富贵的未来！</p>
+      <p style="margin-left: 40px; line-height: 1.1; color: rgb(255, 0, 0)">
+        梦想微信转账：ineedmoney
+      </p>
+      <p style="margin-left: 40px; line-height: 0.5; color: rgb(255, 0, 0)">
+        高投资，高回报，你值得一个令人嫉妒的人生！
+      </p>
+    </div>
+    <div
+      style="
+        background-color: #f1f1f1;
+        margin: top 60px;
+        text-align: center;
+        padding: 40px;
+        font-size: 12px;
+      "
+    >
+      <p style="color: #666">Copyright© wogui01.github.io</p>
+      <a
+        style="color: #666"
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >沪ICP备17024673号</a
+      >
     </div>
   </body>
 </html>
